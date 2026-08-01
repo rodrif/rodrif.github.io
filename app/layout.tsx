@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Facundo Rodriguez - Professional Portfolio",
-  description: "Professional portfolio and personal website of Facundo Rodriguez",
+  title: "Facundo Rodriguez - CV | Technical Leader",
+  description: "CV profesional de Facundo Rodriguez, Technical Leader en Avature. Experiencia en desarrollo de software, ASP.NET MVC, JavaScript y más.",
 };
 
 export default function RootLayout({
