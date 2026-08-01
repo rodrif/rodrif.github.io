@@ -92,11 +92,8 @@ export const cvData: CVData = {
   certifications: [
     {
       name: "First Certificate in English (FCE)",
-      issuer: "Checkout Pro",
-    },
-    {
-      name: "Timonel de yate a vela y motor",
-    },
+      issuer: "Cambridge English",
+    }
   ],
   languages: [
     {

@@ -191,6 +191,12 @@ export const marianoCVData: CVData = {
     },
   ],
   skills: ["Planificación", "Ingeniería", "Gestión de proyectos"],
+  certifications: [
+    {
+      name: "First Certificate in English (FCE)",
+      issuer: "Cambridge English",
+    },
+  ],
   languages: [
     {
       name: "Inglés",
