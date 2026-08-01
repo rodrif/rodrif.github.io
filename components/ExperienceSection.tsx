@@ -1,13 +1,17 @@
-import { cvData } from "@/app/data/cv-data";
+import { CVData } from "@/app/data/cv-data";
 
-export default function ExperienceSection() {
+interface ExperienceSectionProps {
+  data: CVData;
+}
+
+export default function ExperienceSection({ data }: ExperienceSectionProps) {
   return (
     <section className="mb-16">
       <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-8 text-center">
         Experiencia Laboral
       </h2>
       <div className="space-y-6">
-        {cvData.experience.map((exp, index) => (
+        {data.experience.map((exp, index) => (
           <div
             key={index}
             className="bg-white dark:bg-slate-800 rounded-xl p-6 shadow-lg relative"
@@ -29,6 +33,21 @@ export default function ExperienceSection() {
                 <p className="text-sm text-slate-600 dark:text-slate-400">
                   Duración: {exp.duration}
                 </p>
+              )}
+              {exp.location && (
+                <p className="text-sm text-slate-600 dark:text-slate-400">
+                  {exp.location}
+                </p>
+              )}
+              {exp.description && exp.description.length > 0 && (
+                <ul className="mt-3 space-y-1 text-sm text-slate-600 dark:text-slate-400">
+                  {exp.description.map((item: string, idx: number) => (
+                    <li key={idx} className="flex items-start gap-2">
+                      <span className="text-blue-600 dark:text-blue-400 mt-1">•</span>
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
               )}
             </div>
           </div>

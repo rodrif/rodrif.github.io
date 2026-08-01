@@ -1,13 +1,17 @@
-import { cvData } from "@/app/data/cv-data";
+import { CVData } from "@/app/data/cv-data";
 
-export default function EducationSection() {
+interface EducationSectionProps {
+  data: CVData;
+}
+
+export default function EducationSection({ data }: EducationSectionProps) {
   return (
     <section className="mb-16">
       <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-8 text-center">
         Educación
       </h2>
       <div className="space-y-6">
-        {cvData.education.map((edu, index) => (
+        {data.education.map((edu, index) => (
           <div
             key={index}
             className="bg-white dark:bg-slate-800 rounded-xl p-6 shadow-lg"

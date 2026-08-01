@@ -1,6 +1,10 @@
-import { cvData } from "@/app/data/cv-data";
+import { CVData } from "@/app/data/cv-data";
 
-export default function CertificationsSection() {
+interface CertificationsSectionProps {
+  data: CVData;
+}
+
+export default function CertificationsSection({ data }: CertificationsSectionProps) {
   return (
     <section className="mb-16">
       <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-8 text-center">
@@ -25,7 +29,7 @@ export default function CertificationsSection() {
             Certificaciones
           </h3>
           <ul className="space-y-2">
-            {cvData.certifications.map((cert, index) => (
+            {data.certifications?.map((cert, index) => (
               <li
                 key={index}
                 className="text-slate-700 dark:text-slate-300 flex items-start gap-2"
@@ -62,7 +66,7 @@ export default function CertificationsSection() {
             Idiomas
           </h3>
           <ul className="space-y-2">
-            {cvData.languages.map((lang, index) => (
+            {data.languages.map((lang, index) => (
               <li
                 key={index}
                 className="text-slate-700 dark:text-slate-300 flex items-center gap-2"

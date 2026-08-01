@@ -4,6 +4,8 @@ export interface Experience {
   startDate: string;
   endDate: string;
   duration?: string;
+  location?: string;
+  description?: string[];
 }
 
 export interface Education {
@@ -29,11 +31,12 @@ export interface CVData {
     linkedin: string;
     location: string;
     currentRole: string;
+    summary?: string;
   };
   experience: Experience[];
   education: Education[];
   skills: string[];
-  certifications: Certification[];
+  certifications?: Certification[];
   languages: Language[];
 }
 
