@@ -44,7 +44,7 @@ export const marianoCVData: CVData = {
   personal: {
     name: "Mariano Damian Sacco",
     email: "sacco.md@gmail.com",
-    linkedin: "https://www.linkedin.com/in/ingmarianodamian-sacco",
+    linkedin: "https://www.linkedin.com/in/ingmariano-damian-sacco/",
     location: "Argentina",
     currentRole: "Gerente Comercial",
     summary:
