@@ -43,7 +43,7 @@ export interface CVData {
 export const cvData: CVData = {
   personal: {
     name: "Facundo Rodriguez",
-    email: "rodrif89@gmail.com",
+    email: "contacto@facundorodriguez.com.ar",
     linkedin: "https://www.linkedin.com/in/facundorodriguez-b1332191",
     location: "Argentina",
     currentRole: "Technical Leader en Avature",
