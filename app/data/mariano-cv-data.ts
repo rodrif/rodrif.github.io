@@ -129,6 +129,7 @@ export const marianoCVData: CVData = {
     {
       institution: "Técnico Electrónico",
       degree: "Técnico Electrónico",
+      period: "2002 - 2007",
     },
   ],
   skills: [
