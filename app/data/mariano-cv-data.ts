@@ -33,6 +33,7 @@ export interface CVData {
     location: string;
     currentRole: string;
     summary?: string;
+    profileImage?: string;
   };
   experience: Experience[];
   education: Education[];
@@ -51,6 +52,7 @@ export const marianoCVData: CVData = {
     currentRole: "Manager Negocio",
     summary:
       "Profesional Comercial y Marketing con amplia trayectoria en la gestión integral de unidades de negocio, desarrollo de productos y ejecución de estrategias de posicionamiento en el mercado. Especialista en liderar planes de expansión y lanzamientos comerciales, combinando una visión analítica basada en datos con la formación de equipos de trabajo enfocados en resultados.",
+    profileImage: "/images/mariano-profile.png",
   },
   experience: [
     {

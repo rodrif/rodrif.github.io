@@ -8,12 +8,22 @@ export default function HeaderSection({ data }: HeaderSectionProps) {
   return (
     <section className="text-center mb-20">
       <div className="mb-8">
-        <div className="w-32 h-32 mx-auto rounded-full bg-gradient-to-br from-slate-200 to-slate-300 dark:from-slate-700 dark:to-slate-600 flex items-center justify-center text-4xl font-bold text-slate-600 dark:text-slate-300">
-          {data.personal.name
-            .split(" ")
-            .map((n) => n[0])
-            .join("")}
-        </div>
+        {data.personal.profileImage ? (
+          <div className="w-32 h-32 mx-auto rounded-full overflow-hidden border-4 border-slate-200 dark:border-slate-700 shadow-lg">
+            <img
+              src={data.personal.profileImage}
+              alt={data.personal.name}
+              className="w-full h-full object-cover object-top"
+            />
+          </div>
+        ) : (
+          <div className="w-32 h-32 mx-auto rounded-full bg-gradient-to-br from-slate-200 to-slate-300 dark:from-slate-700 dark:to-slate-600 flex items-center justify-center text-4xl font-bold text-slate-600 dark:text-slate-300">
+            {data.personal.name
+              .split(" ")
+              .map((n) => n[0])
+              .join("")}
+          </div>
+        )}
       </div>
       <h1 className="text-5xl md:text-6xl font-bold text-slate-900 dark:text-white mb-4">
         {data.personal.name}

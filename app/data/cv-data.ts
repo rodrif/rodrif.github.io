@@ -33,6 +33,7 @@ export interface CVData {
     location: string;
     currentRole: string;
     summary?: string;
+    profileImage?: string;
   };
   experience: Experience[];
   education: Education[];
@@ -49,6 +50,7 @@ export const cvData: CVData = {
     linkedin: "https://www.linkedin.com/in/facundo-rodriguez-b1332191/",
     location: "Argentina",
     currentRole: "Technical Leader en Avature",
+    profileImage: "",
   },
   experience: [
     {
