@@ -11,7 +11,7 @@ export interface Experience {
 export interface Education {
   institution: string;
   degree: string;
-  period: string;
+  period?: string;
 }
 
 export interface Certification {
@@ -129,7 +129,6 @@ export const marianoCVData: CVData = {
     {
       institution: "Técnico Electrónico",
       degree: "Técnico Electrónico",
-      period: "Sin especificar",
     },
   ],
   skills: [

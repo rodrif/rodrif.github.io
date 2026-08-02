@@ -11,7 +11,7 @@ export interface Experience {
 export interface Education {
   institution: string;
   degree: string;
-  period: string;
+  period?: string;
 }
 
 export interface Certification {

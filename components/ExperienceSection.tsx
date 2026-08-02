@@ -41,12 +41,24 @@ export default function ExperienceSection({ data }: ExperienceSectionProps) {
               )}
               {exp.description && exp.description.length > 0 && (
                 <ul className="mt-3 space-y-1 text-sm text-slate-600 dark:text-slate-400">
-                  {exp.description.map((item: string, idx: number) => (
-                    <li key={idx} className="flex items-start gap-2">
-                      <span className="text-blue-600 dark:text-blue-400 mt-1">•</span>
-                      <span>{item}</span>
-                    </li>
-                  ))}
+                  {exp.description.map((item: string, idx: number) => {
+                    const parts = item.split(':');
+                    return (
+                      <li key={idx} className="flex items-start gap-2">
+                        <span className="text-blue-600 dark:text-blue-400 mt-1">•</span>
+                        <span>
+                          {parts.length > 1 ? (
+                            <>
+                              <span className="font-semibold">{parts[0]}:</span>
+                              {parts.slice(1).join(':')}
+                            </>
+                          ) : (
+                            <span className="font-semibold">{item}</span>
+                          )}
+                        </span>
+                      </li>
+                    );
+                  })}
                 </ul>
               )}
             </div>
